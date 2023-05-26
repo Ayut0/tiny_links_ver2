@@ -4,11 +4,11 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript",
     "next/core-web-vitals",
-    "prettier",
     "next",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@next/next/recommended"
+    "plugin:@next/next/recommended",
+    "prettier"
   ],
   // Lists the ESLint plugins to be used
   "plugins": ["@typescript-eslint", "import", "unused-imports"],
@@ -26,8 +26,10 @@
     "src/lib/firebase.ts",
     "src/pages/_app.tsx"
   ],
+  // Specifies the parser to be used for TypeScript
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "tsconfig.json"
   },
   "rules": {
     "semi": ["error", "always"],
