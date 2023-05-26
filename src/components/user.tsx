@@ -14,8 +14,7 @@ function User() {
   const userRef = doc(useFirestore(), 'urls', 'testurl')
 
   // subscribe to a document for realtime updates. just one line!
-  const { status, data } = useFirestoreDocData(userRef)
-  console.log(status, data)
+  const { status } = useFirestoreDocData(userRef)
 
   // easily check the loading status
   if (status === 'loading') {

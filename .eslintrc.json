@@ -1,4 +1,9 @@
 {
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
     "airbnb",
     "plugin:@typescript-eslint/recommended",
@@ -9,10 +14,11 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@next/next/recommended",
     "plugin:import/warnings",
-    "prettier"
+    "prettier",
+    "eslint-config-prettier"
   ],
   // Lists the ESLint plugins to be used
-  "plugins": ["@typescript-eslint", "import", "unused-imports"],
+  "plugins": ["@typescript-eslint", "import", "unused-imports", "prettier"],
   "ignorePatterns": [
     ".eslintrc.js",
     ".lintstagedrc.js",
@@ -34,6 +40,7 @@
   },
   "rules": {
     "semi": ["error", "always"],
+    "no-console": "error",
     "unused-imports/no-unused-vars": [
       "error",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
