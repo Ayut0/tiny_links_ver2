@@ -1,16 +1,16 @@
-import { getFirestore } from 'firebase/firestore'
-import { Inter } from 'next/font/google'
+import { getFirestore } from 'firebase/firestore';
+import { Inter } from 'next/font/google';
 
-import { FirestoreProvider, useFirebaseApp } from 'reactfire'
+import { FirestoreProvider, useFirebaseApp } from 'reactfire';
 
-import SEO from '@/components/base/Head'
-import User from '@/components/user'
-import styles from '@/styles/Home.module.css'
+import SEO from '@/components/base/Head';
+import User from '@/components/user';
+import styles from '@/styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const firestooreInstance = getFirestore(useFirebaseApp())
+  const firestooreInstance = getFirestore(useFirebaseApp());
 
   return (
     <>
@@ -21,5 +21,5 @@ export default function Home() {
         </main>
       </FirestoreProvider>
     </>
-  )
+  );
 }
