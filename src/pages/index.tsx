@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 
 import SEO from '@/components/base/Head';
+import UrlRegisterForm from '@/components/page/form/urlForm/UrlRegisterForm';
 import User from '@/components/user';
 import styles from '@/styles/Home.module.css';
 
@@ -12,6 +13,7 @@ export default function Home() {
       <SEO />
       <main className={`${styles.main} ${inter.className}`}>
         <User />
+        <UrlRegisterForm />
       </main>
     </>
   );
