@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 
 import SEO from '@/components/base/Head';
-import Header from '@/components/base/Header/Header';
+
 import LoginForm from '@/components/page/form/authForm/loginForm/LoginForm';
 import Top from '@/components/page/top/Top';
 import useUserStatus from '@/components/page/top/hooks/useUser';
@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <>
       <SEO />
-      <Header />
       <main className={`${styles.main} ${inter.className}`}>
         {userStatus !== 'loading' && typeof signedInUser === 'undefined' ? (
           <LoginForm />

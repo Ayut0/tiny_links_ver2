@@ -9,7 +9,7 @@ const SignOutButton = () => {
 
   return (
     <Button
-      onClick={() => handleSignOut}
+      onClick={() => handleSignOut()}
       text="Sign out"
       variant="contained"
       type="button"

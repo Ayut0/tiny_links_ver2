@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
 import UrlRegisterForm from '../form/urlForm/UrlRegisterForm';
@@ -12,13 +13,13 @@ const Top = () => {
     redirectToLogin();
   }
   if (userStatus === 'loading') {
-    return <p>Loading...</p>;
+    return <Typography sx={{ color: '#5f6c7b' }}>Loading...</Typography>;
   }
 
   return (
     <>
       <PageTitle
-        content="Tiny Links"
+        content="Generate your own shortened URL"
         variant={'h2'}
         component={'symbol'}
         sx={{ color: '#094067', fontWeight: '700' }}

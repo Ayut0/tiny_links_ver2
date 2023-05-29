@@ -47,16 +47,32 @@ function Header() {
             </Link>
             {state.userStatus !== 'error' &&
               typeof state.signedInUser !== 'undefined' && (
-                <Typography
-                  sx={{
-                    fontFamily: 'monospace',
-                    fontSize: { xs: '.75rem', md: '1rem' },
-                    color: 'inherit',
-                    textDecoration: 'none',
-                  }}
+                <Box
+                  sx={{ display: 'flex', justifyContent: 'space-around', width: '30%' }}
                 >
-                  Welcome Back, {state.signedInUser.name}
-                </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: 'monospace',
+                      fontSize: { xs: '.75rem', md: '1rem' },
+                      color: 'inherit',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Welcome Back, {state.signedInUser.name}
+                  </Typography>
+                  <Link href="/mypage">
+                    <Typography
+                      sx={{
+                        fontFamily: 'monospace',
+                        fontSize: { xs: '.75rem', md: '1rem' },
+                        color: 'inherit',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      My page
+                    </Typography>
+                  </Link>
+                </Box>
               )}
             {state.userStatus === 'success' &&
             typeof state.signedInUser === 'undefined' ? (
