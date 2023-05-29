@@ -1,4 +1,4 @@
-import { Stack, TextField } from '@mui/material';
+import { Stack, TextField, Typography } from '@mui/material';
 
 import { Controller } from 'react-hook-form';
 
@@ -19,7 +19,11 @@ const UrlRegisterForm = () => {
 
   return (
     <>
-      <PageTitle content="Generate shorten URL" variant={'h4'} component={'symbol'} />
+      <PageTitle
+        content="Please enter ling URL here"
+        variant={'h4'}
+        component={'symbol'}
+      />
       <Stack
         component="form"
         noValidate
@@ -43,6 +47,10 @@ const UrlRegisterForm = () => {
         />
         <Button text="Generate" variant="contained" type="submit" />
       </Stack>
+      <Typography>
+        * Please enter the URL you want to shorten in the URL field and click the Generate
+        button.
+      </Typography>
     </>
   );
 };

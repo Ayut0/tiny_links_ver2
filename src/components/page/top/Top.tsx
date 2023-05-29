@@ -18,7 +18,7 @@ const Top = () => {
   return (
     <>
       <PageTitle
-        content="Tiny Links"
+        content="Generate your own shortened URL"
         variant={'h2'}
         component={'symbol'}
         sx={{ color: '#094067', fontWeight: '700' }}

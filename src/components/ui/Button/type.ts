@@ -10,7 +10,8 @@ type ButtonProps = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     | ((e: any) => Promise<void>)
     | React.MouseEvent<HTMLButtonElement, MouseEvent>
-    | (() => Promise<void>);
+    | (() => Promise<void>)
+    | Promise<void>;
   sx?: SxProps<Theme> | undefined;
   variant: 'text' | 'outlined' | 'contained' | undefined;
   type: 'submit' | undefined | 'button';
