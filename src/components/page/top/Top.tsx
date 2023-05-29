@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
 import UrlRegisterForm from '../form/urlForm/UrlRegisterForm';
@@ -12,7 +13,7 @@ const Top = () => {
     redirectToLogin();
   }
   if (userStatus === 'loading') {
-    return <p>Loading...</p>;
+    return <Typography sx={{ color: '#5f6c7b' }}>Loading...</Typography>;
   }
 
   return (

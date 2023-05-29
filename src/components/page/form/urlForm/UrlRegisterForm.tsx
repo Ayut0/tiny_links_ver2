@@ -8,7 +8,7 @@ import Button from '@/components/ui/Button/Button';
 import PageTitle from '@/components/ui/Title/Title';
 
 const UrlRegisterForm = () => {
-  const { handleSubmit, submitHandler, control } = useUrlRegisterForm();
+  const { handleSubmit, submitHandler, control, error } = useUrlRegisterForm();
 
   const validationRules = {
     longUrl: {
@@ -47,6 +47,7 @@ const UrlRegisterForm = () => {
         />
         <Button text="Generate" variant="contained" type="submit" />
       </Stack>
+      {error && <Typography sx={{ color: '#ef4565' }}>{error}</Typography>}
       <Typography>
         * Please enter the URL you want to shorten in the URL field and click the Generate
         button.

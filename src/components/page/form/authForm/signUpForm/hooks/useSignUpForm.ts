@@ -2,6 +2,7 @@
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { useFirebaseApp, useFirestore } from 'reactfire';
@@ -10,6 +11,7 @@ import type { SignUpInfo, UserInfo } from '../signUpInfo';
 
 const useSignUpForm = () => {
   const router = useRouter();
+  const [error, setError] = useState<string>('');
   const firebase = useFirebaseApp();
   const firestore = useFirestore();
   const {
@@ -19,7 +21,7 @@ const useSignUpForm = () => {
   } = useForm<SignUpInfo>();
 
   const signUpHandler = async (data: SignUpInfo) => {
-    const { userName, email, password } = data;
+    const { name, email, password } = data;
 
     try {
       const auth = getAuth(firebase);
@@ -27,7 +29,7 @@ const useSignUpForm = () => {
 
       const user: UserInfo = {
         uid: newUser.user.uid,
-        userName,
+        name: newUser.user.displayName || name,
         email,
         password,
       };
@@ -36,8 +38,8 @@ const useSignUpForm = () => {
       await addDoc(users, user);
 
       router.push('/');
-    } catch (error) {
-      console.log(error);
+    } catch (e) {
+      setError('An error occurred while signing up. Please try again later.');
     }
   };
 
@@ -46,6 +48,7 @@ const useSignUpForm = () => {
     signUpHandler,
     control,
     errors,
+    error,
   };
 };
 

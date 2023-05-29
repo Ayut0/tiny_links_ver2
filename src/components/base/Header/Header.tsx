@@ -47,7 +47,9 @@ function Header() {
             </Link>
             {state.userStatus !== 'error' &&
               typeof state.signedInUser !== 'undefined' && (
-                <Box sx={{ display: 'flex' }}>
+                <Box
+                  sx={{ display: 'flex', justifyContent: 'space-around', width: '30%' }}
+                >
                   <Typography
                     sx={{
                       fontFamily: 'monospace',
