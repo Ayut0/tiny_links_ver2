@@ -1,6 +1,7 @@
+import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import type { ReactNode } from 'react';
-import { FirestoreProvider, useFirebaseApp } from 'reactfire';
+import { FirestoreProvider, useFirebaseApp, AuthProvider } from 'reactfire';
 
 type Children = {
   children: ReactNode | ReactNode[];
@@ -9,8 +10,13 @@ type Children = {
 function FirebaseSDKProvider({ children }: Children) {
   const app = useFirebaseApp();
   const firestoreInstance = getFirestore(app);
+  const auth = getAuth(app);
 
-  return <FirestoreProvider sdk={firestoreInstance}>{children}</FirestoreProvider>;
+  return (
+    <AuthProvider sdk={auth}>
+      <FirestoreProvider sdk={firestoreInstance}>{children}</FirestoreProvider>
+    </AuthProvider>
+  );
 }
 
 export default FirebaseSDKProvider;
