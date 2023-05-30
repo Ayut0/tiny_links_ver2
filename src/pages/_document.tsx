@@ -4,6 +4,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      {/* // Google font */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+      ></link>
       <body>
         <Main />
         <NextScript />

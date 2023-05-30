@@ -6,7 +6,6 @@ In your page, you can delete and edit your URLs.
 
 ![mypage](https://github.com/Ayut0/tiny_links_ver2/assets/75427166/1c05f363-283e-43eb-9b96-9ab1937e9112)
 
-
 ## Getting Started
 
 First, run the development server:
@@ -31,6 +30,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## DEMO
 
-
 https://github.com/Ayut0/tiny_links_ver2/assets/75427166/dc8e3aa7-b2e4-4490-acdb-b5f2fe35e4b1
-

@@ -21,8 +21,11 @@ const Top = () => {
       <PageTitle
         content="Generate your own shortened URL"
         variant={'h2'}
-        component={'symbol'}
-        sx={{ color: '#094067', fontWeight: '700' }}
+        sx={{
+          color: '#094067',
+          fontWeight: '700',
+          fontSize: { xs: '1.5rem', md: '2rem' },
+        }}
       />
       <UrlRegisterForm />
     </>
