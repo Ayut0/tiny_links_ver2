@@ -34,14 +34,12 @@ function Header() {
               <PageTitle
                 variant="h2"
                 sx={{
-                  fontFamily: 'monospace',
                   fontWeight: 700,
                   fontSize: { xs: '1.25rem', md: '2rem' },
                   letterSpacing: '.3rem',
                   color: 'inherit',
                   textDecoration: 'none',
                 }}
-                component={'symbol'}
                 content={'Tiny Links'}
               />{' '}
             </Link>
@@ -52,10 +50,10 @@ function Header() {
                 >
                   <Typography
                     sx={{
-                      fontFamily: 'monospace',
                       fontSize: { xs: '.75rem', md: '1rem' },
                       color: 'inherit',
                       textDecoration: 'none',
+                      display: { xs: 'none', md: 'block' },
                     }}
                   >
                     Welcome Back, {state.signedInUser.name}
@@ -63,7 +61,6 @@ function Header() {
                   <Link href="/mypage">
                     <Typography
                       sx={{
-                        fontFamily: 'monospace',
                         fontSize: { xs: '.75rem', md: '1rem' },
                         color: 'inherit',
                         textDecoration: 'none',
