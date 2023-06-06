@@ -1,5 +1,7 @@
 The app will allow users to shorten long URLs much like TinyURL.com and bit.ly do.
 
+I created this app before with Node.js and ejs, but I have wanted to re-create with modern tech stack such as Next.js and TypeScript.
+
 ![Top](https://github.com/Ayut0/tiny_links_ver2/assets/75427166/d8520d34-0c77-43e5-bfb0-6186c93ecaef)
 
 In your page, you can delete and edit your URLs.
